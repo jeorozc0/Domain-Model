@@ -13,23 +13,24 @@ namespace DomainModel
         private int grade;
         private string assignmentName;
         private string comments;
+        private int newGrade;
 
         
-        public bool viewGrades(string username, string password)
+        public int viewGrades(string username, string password)
         {
             //check if username and password are correct//
             //if so, view grades//
             return grade;
         }
         
-        public bool viewComments(string username, string password)
+        public string viewComments(string username, string password)
         {
             //check if username and password are correct//
             //if so, view comments//
             return comments;
         }
         
-        public bool editGrades(string username, string password)
+        public int editGrades(string username, string password)
         {
             //check if username and password are correct//
             //if so, edit grades//

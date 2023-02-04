@@ -7,12 +7,11 @@ namespace DomainModel
 {
     public class inbox
     {
-        private string bodyMessage;
-        private string userSender;
-        private string userReceiver;
-        private datetime messageDate;
+        private string bodyMessage = "Hello World";
+        private string userSender = "me";
+        private string userReceiver = "me";
+        private DateTime messageDate;
         private int messageID;
-        private File attachment;
 
         
         public bool sendMessage(string username, string password)
@@ -36,21 +35,21 @@ namespace DomainModel
             return true;
         }
         
-        public bool viewAttachment(string username, string password)
+        public bool viewAttachment(string username, string password, string fileUrl)
         {
             //check if username and password are correct//
             //if so, view attachment//
-            file attachment = new file();
-            file.viewFile(username, password);
+            fileCanvas attachment = new fileCanvas();
+            attachment.viewFile(fileUrl);
             return true;
         }
         
-        private bool downloadAttachment(string username, string password)
+        private bool downloadAttachment(string username, string password, string fileUrl)
         {
             //check if username and password are correct//
             //if so, download attachment//
-            file attachment = new file();
-            file.downloadFile(username, password);
+            fileCanvas attachment = new fileCanvas();
+            attachment.downloadFile(fileUrl);
             return true;
         }
         

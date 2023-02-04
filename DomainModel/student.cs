@@ -65,15 +65,13 @@ public class student
         assignment assignment = new assignment();
         return true;
     }
-    public 
-
     
     public bool viewMessages(string username, string password)
     {
         //check if username and password are correct//
         //if so, view messages//
         inbox inbox = new inbox();
-        inbox.viewMessages(username, password);
+        inbox.viewMessage(username, password);
 
         return true;
     }

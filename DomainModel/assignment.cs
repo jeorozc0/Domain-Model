@@ -11,7 +11,7 @@ namespace DomainModel
         private string description;
         private DateTime dueDate;
         private DateTime dateAssigned;
-        private int grade;
+        private int grades;
         private string comments;
 
         
@@ -22,15 +22,16 @@ namespace DomainModel
             return true;
         }
         
-        public bool viewAssignmentGrade(string username, string password)
+        public int viewAssignmentGrade(string username, string password)
         {
             //check if username and password are correct//
             //if so, view assignment grade//
-            grade = gradebook.viewGrades(username, password);
-            return grade;
+            gradebook grade = new gradebook();
+            grade.viewGrades(username, password);
+            return grades;
         }
         
-        private bool leaveComment(string username, string password)
+        private string leaveComment(string username, string password)
         {
             //check if username and password are correct//
             //if so, leave comment//
@@ -41,7 +42,7 @@ namespace DomainModel
         {
             //check if username and password are correct//
             //if so, upload assignment//
-            file file = new file();
+            fileCanvas file = new fileCanvas();
             file.uploadFile(username, password);
             return true;
         }

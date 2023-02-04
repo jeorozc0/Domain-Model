@@ -15,7 +15,7 @@ namespace DomainModel
 
 
         
-        public bool viewComments(string username, string password)
+        public string viewComments(string username, string password)
         {
             //check if username and password are correct//
             //if so, view comments//
@@ -23,7 +23,7 @@ namespace DomainModel
         }
 
         
-        public bool leaveComment(string username, string password)
+        public string leaveComment(string username, string password)
         {
             //check if username and password are correct//
             //if so, leave comment//

@@ -59,7 +59,7 @@ namespace DomainModel
             //check if username and password are correct//
             //if so, view students//
             student student = new student();
-            student.viewStudentDetails(username, password);
+            student.viewStudentDetails(username);
             return true;
         }
         
@@ -75,10 +75,10 @@ namespace DomainModel
             //if so, view materials//
             return true;
         }
-        public bool viewFile(string username, string password)
+        public bool viewFile(string username, string password, string fileUrl)
         {
-            file file = new file();
-            file.downloadFile(username, password);
+            fileCanvas file = new fileCanvas();
+            file.downloadFile(fileUrl);
         
 
             return true;
